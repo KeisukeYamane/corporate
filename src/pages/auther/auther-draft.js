@@ -5,7 +5,7 @@ import AutherPage from "../auther"
 
 const AutherPostPage = ({ location }) => {
   const { contentId, draftKey } = queryString.parse(location.search);
-  const [data, setData] = useState;
+  const [data, setData] = useState();
 
   useEffect(() => {
     fetch(`https://simple-site.microcms.io/api/v1/authers/${contentId}?draftKey=${draftKey}`, 
