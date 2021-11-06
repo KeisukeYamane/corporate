@@ -22,19 +22,18 @@ const AutherPage = ({ data }) => {
 
 export const query = graphql`
 query MyQuery {
-  allMicrocmsAuthers {
+  allMicrocmsAuthers(sort: {fields: publishedAt, order: DESC}) {
     edges {
       node {
         id
-        image {
-          url
-        }
         name
-        profile
+        belongs
+        publishedAt
       }
     }
   }
 }
+
 
 `
 export default AutherPage;
