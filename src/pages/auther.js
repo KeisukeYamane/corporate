@@ -10,8 +10,8 @@ const AutherPage = ({ data }) => {
                 data.allMicrocmsAuthers.edges.map(({node}) => (
                     <li key={node.name}>
                         {node.name}
-                        {node.image.url}
-                        {node.profile}
+                        {node.belongs}
+                        {node.publishedAt}
                     </li>
                 ))
             }
