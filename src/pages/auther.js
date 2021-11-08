@@ -17,8 +17,8 @@ const AutherPage = ({ data }) => {
             }
             </ul>
             <div>
-              ID!!: {process.env.ID}
-              PASSWORD!!: {process.env.PASSWORD}
+              ID!!: {process.env.GATSBY_ID}
+              PASSWORD!!: {process.env.GATSBY_PASSWORD}
             </div>
         </Layout>
     )
