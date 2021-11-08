@@ -9,18 +9,22 @@ const AutherDraftPage = ({ location }) => {
 
   useEffect(() => {
     fetch(`https://simple-site.microcms.io/api/v1/authers/${contentId}?draftKey=${draftKey}`, 
+
+    // fetch(`https://simple-site.microcms.io/api/v1/authers/u8pl20kt6?draftKey=7HGivEpWIc`, 
     {
       headers: {
         'X-MICROCMS-API-KEY' : process.env.MICROCMS_API_KEY,
       },
     })
       .then(res => res.json())
-      .then(res => setData({ microcmsNews: res }))
+      .then(res => setData({ microcmsAuthers: res }))
   }, []);
 
-  if (data === null) {
+  if (data === undefined) {
     return null;
   }
+
+  console.log("data????   " + data)
 
   return (
     <AutherPost data={data} /> 
