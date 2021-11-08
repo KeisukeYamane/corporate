@@ -13,7 +13,7 @@ const AutherDraftPage = ({ location }) => {
     // fetch(`https://simple-site.microcms.io/api/v1/authers/u8pl20kt6?draftKey=7HGivEpWIc`, 
     {
       headers: {
-        'X-MICROCMS-API-KEY' : process.env.MICROCMS_API_KEY,
+        'X-MICROCMS-API-KEY' : process.env.GATSBY_MICROCMS_API_KEY,
       },
     })
       .then(res => res.json())
@@ -23,8 +23,6 @@ const AutherDraftPage = ({ location }) => {
   if (data === undefined) {
     return null;
   }
-
-  console.log("data????   " + data)
 
   return (
     <AutherPost data={data} /> 
