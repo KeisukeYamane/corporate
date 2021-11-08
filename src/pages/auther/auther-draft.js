@@ -10,7 +10,7 @@ const AutherDraftPage = ({ location }) => {
   console.log("contentId  " + contentId)
   console.log("draftKey  " + draftKey)
   console.log(queryString.parse(location.search))
-  console.log("process.env.MICROCMS_API_KEY  " + process.env.MICROCMS_API_KEY)
+  console.log("process.env.GATSBY_MICROCMS_API_KEY  " + process.env.GATSBY_MICROCMS_API_KEY)
 
   useEffect(() => {
     // fetch(`https://simple-site.microcms.io/api/v1/authers/qznj0mhnlv?draftKey=gxyXbSS06A`,
