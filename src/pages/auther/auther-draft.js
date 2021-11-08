@@ -8,12 +8,10 @@ const AutherDraftPage = ({ location }) => {
   const [data, setData] = useState();
 
   useEffect(() => {
-    fetch(`https://simple-site.microcms.io/api/v1/authers/${contentId}?draftKey=${draftKey}`, 
-
-    // fetch(`https://simple-site.microcms.io/api/v1/authers/u8pl20kt6?draftKey=7HGivEpWIc`, 
+    fetch(`https://simple-site.microcms.io/api/v1/authers/${contentId}?draftKey=${draftKey}`,
     {
       headers: {
-        'X-MICROCMS-API-KEY' : process.env.GATSBY_MICROCMS_API_KEY,
+        'X-MICROCMS-API-KEY' : process.env.MICROCMS_API_KEY,
       },
     })
       .then(res => res.json())
