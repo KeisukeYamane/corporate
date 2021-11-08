@@ -8,11 +8,13 @@ const AutherPage = ({ data }) => {
             <ul>
             {
                 data.allMicrocmsAuthers.edges.map(({node}) => (
+                  <a href={"auther/" + node.id}>
                     <li key={node.name}>
                         {node.name}
                         {node.belongs}
                         {node.publishedAt}
                     </li>
+                  </a>
                 ))
             }
             </ul>
