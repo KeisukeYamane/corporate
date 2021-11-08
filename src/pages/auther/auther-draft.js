@@ -11,7 +11,7 @@ const AutherDraftPage = ({ location }) => {
     fetch(`https://simple-site.microcms.io/api/v1/authers/${contentId}?draftKey=${draftKey}`,
     {
       headers: {
-        'X-MICROCMS-API-KEY' : process.env.MICROCMS_API_KEY,
+        'X-MICROCMS-API-KEY' : process.env.GATSBY_MICROCMS_API_KEY,
       },
     })
       .then(res => res.json())
