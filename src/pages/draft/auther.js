@@ -14,7 +14,7 @@ const AutherDraftPage = ({ location }) => {
       },
     })
       .then(res => res.json())
-      .then(res => setData({ microcmsCommunities: res }))
+      .then(res => setData({ microcmsAuthers: res }))
   }, [])
 
   if (data === undefined) {
