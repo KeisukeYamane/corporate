@@ -3,17 +3,16 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 
 const AutherPage = ({ data }) => {
+  const info = data.microcmsAuthers
     return (
         <Layout pageTitle="My Blog Posts">
             <ul>
-            {
-                data.allMicrocmsAuthers.edges.map(({node}) => (
-                    <li key={node.name}>
-                        {node.name}
-                        {node.image.url}
-                        {node.profile}
-                    </li>
-                ))
+            { 
+              <li key={info.id}>
+                  {info.name}<br />
+                  <img src={info.image.url}></img><br />
+                  {info.profile}<br />
+              </li>
             }
             </ul>
         </Layout>
@@ -22,17 +21,13 @@ const AutherPage = ({ data }) => {
 
 export const query = graphql`
 query MyQuery {
-  allMicrocmsAuthers {
-    edges {
-      node {
-        id
-        image {
-          url
-        }
-        name
-        profile
-      }
+  microcmsAuthers {
+    id
+    image {
+      url
     }
+    name
+    profile
   }
 }
 
