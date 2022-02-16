@@ -10,6 +10,16 @@ module.exports = {
     title: "コーポレートサイト",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-gatsby-cloud`,
+      options: {
+        headers: {
+          "draft/*": [
+            "Cache-Control: public,max-age=31536000,s-maxage=31536000,immutable"
+          ],
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
         resolve: 'gatsby-source-microcms',
